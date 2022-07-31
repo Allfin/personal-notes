@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 import NoteItem from "./NoteItem";
 
 function NoteList({ notes, query, onArchive, onDelete, isArchived = false }) {

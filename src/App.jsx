@@ -29,9 +29,8 @@ const App = () => {
   return (
     <>
       <Header query={searchHandler} />
-      {console.log(query)}
       <main className="note-app__body">
-        <AddNote />
+        <AddNote setNotes={setNotes} notes={notes} />
         <h2>Catatan</h2>
         <NoteList
           notes={notes}
