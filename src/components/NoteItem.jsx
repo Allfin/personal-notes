@@ -1,4 +1,5 @@
 import React from "react";
+import { showFormattedDate } from "../utils/index";
 
 const NoteItem = ({ note, onArchive, onDelete }) => {
   return (
@@ -7,6 +8,9 @@ const NoteItem = ({ note, onArchive, onDelete }) => {
         <h2 className="note-item__title">
           <b>{note.title}</b>
         </h2>
+        <span className="note-item__date">
+          {showFormattedDate(note.createdAt)}
+        </span>
         <p className="note-item__body">{note.body}</p>
       </div>
       <div className="note-item__action">
