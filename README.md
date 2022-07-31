@@ -10,6 +10,7 @@ React project for final project submission **membangun aplikasi catatan mengguna
 ## Feature
 
 - **Display note**
+- **Move note item to archive**
 - **Add new note**
 - **Delete note**
 
