@@ -22,7 +22,7 @@ function NoteList({ notes, query, onArchive, onDelete, isArchived = false }) {
             <NoteItem
               key={note.id}
               onArchive={onArchive}
-              // onDelete={onDelete}
+              onDelete={onDelete}
               note={note}
             />
           ))

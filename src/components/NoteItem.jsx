@@ -1,8 +1,6 @@
 import React from "react";
 
-const NoteItem = ({ note, onArchive }) => {
-  const deleteHandler = () => console.log(note);
-
+const NoteItem = ({ note, onArchive, onDelete }) => {
   return (
     <div className="note-item">
       <div className="note-item__content">
@@ -12,7 +10,10 @@ const NoteItem = ({ note, onArchive }) => {
         <p className="note-item__body">{note.body}</p>
       </div>
       <div className="note-item__action">
-        <button className="note-item__delete-button" onClick={deleteHandler}>
+        <button
+          className="note-item__delete-button"
+          onClick={() => onDelete(note.id)}
+        >
           Delete
         </button>
         <button

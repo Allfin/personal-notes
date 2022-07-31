@@ -10,6 +10,11 @@ const App = () => {
   const [notes, setNotes] = useState(getInitialData);
   const [query, setQuery] = useState("");
 
+  const deleteHandler = (id) => {
+    const noteHandler = notes.filter((note) => note.id !== id);
+    setNotes(noteHandler);
+  };
+
   const archivedHandler = (id) => {
     const archives = [...notes];
     const index = notes.findIndex((note) => note.id === id);
@@ -31,7 +36,7 @@ const App = () => {
         <NoteList
           notes={notes}
           query={query}
-          key={"unarchived-notes"}
+          onDelete={deleteHandler}
           onArchive={archivedHandler}
         />
         <h2>Arsip</h2>
@@ -39,8 +44,8 @@ const App = () => {
           notes={notes}
           query={query}
           isArchived={true}
+          onDelete={deleteHandler}
           onArchive={archivedHandler}
-          key={"archived-notes"}
         />
       </main>
     </>
