@@ -44,11 +44,14 @@ textarea::placeholder {
   max-width: 1000px;
   margin: 16px auto;
   padding: 12px;
+  color: white;
+  min-height: 100vh;
 }
 
 .note-app__body h2 {
   font-weight: normal;
   margin: 16px 0;
+  text-align: center;
 }
 
 .note-input {
